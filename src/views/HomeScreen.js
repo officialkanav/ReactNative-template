@@ -1,7 +1,8 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import {connect} from 'react-redux';
 
-export default class Homescreen extends React.PureComponent {
+class Homescreen extends React.PureComponent {
   constructor(props) {
     super(props);
   }
@@ -19,3 +20,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+const mapStateToProps = (state) => {
+  return {};
+};
+
+function mapDispatchToProps(dispatch) {
+  return {
+    func: (page) => {
+      return dispatch(func(page));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Homescreen);
