@@ -1,2 +1,3 @@
 #!/bin/bash
-read -p "Enter: " name
+echo "here"
+echo "this is a test" > ./test/test.txt
